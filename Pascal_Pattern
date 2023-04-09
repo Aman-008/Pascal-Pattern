@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num, row, col;
+    cin >> num;
+    for (row = 1; row <= num; row++)
+    {
+        cout << "*";
+        int c = 1;
+        for (col = 1; col <= row; col++)
+        {
+            cout << c;
+            c = c * (row - col) / col;
+        }
+        cout << "*";
+        cout << endl;
+    }
+
+    return 0;
+}
